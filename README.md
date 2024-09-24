@@ -147,3 +147,71 @@ stateDiagram-v2
       join_state --> State4
       State4 --> [*]
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$$
+h={1 \over 2} hf
+$$
+
+```mermaid
+graph LR
+A[Привет] --> B{Условие?}
+B -- да --> C[a=8]
+B -- нет --> E[конец]
+C--> D[hhh]
+D --> E
+```
+
+```mermaid
+stateDiagram-v2
+state fork_state <<fork>>
+[*] --> fork_state
+fork_state --> State2
+fork_state --> State3
+
+state join_state <<join>>
+State2 --> join_state
+State3 --> join_state
+join_state --> State4
+State4 --> [*]
+```
+
+```mermaid
+graph LR
+subgraph aa
+A[ААА]
+B[BBB]
+C[fff]
+end
+subgraph bb
+E[aaa]
+end
+A --> B
+B --> C
+C --> E
+```
